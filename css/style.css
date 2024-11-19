@@ -1,0 +1,67 @@
+/*モバイルファースト*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: beige;
+}
+
+main{
+    margin: 90px auto;
+    box-sizing: border-box;
+    padding: 0 2%;
+    max-width: auto;
+}
+img{
+    width: 180px;
+}
+.items{
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+    gap: 20px;
+    text-align: center;
+}
+
+header{
+    position: relative;
+    color: #b41f1f;
+}
+.header-text{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.header-title{
+    font-size: 5rem;
+    text-shadow: 0 0 10px rgb(23, 121, 212), 0 0 #fff;
+}
+.header video{
+    object-fit: cover;
+    object-position: center top;
+}
+.header-text, header video{
+    width: 100%;
+    height: 100vh;
+}
+/*ブレイクポイント　PCデザイン */
+@media(min-width:1024px){
+    body{
+        background-color: rgb(52, 130, 231);
+    }
+    .items{
+        grid-template-columns: 1fr 1fr 1fr;
+        text-align: center;
+    }
+    img{
+        width: 250px;
+    }
+}
+header{
+    position: relative;
+    color: #fff;
+}
